@@ -6,5 +6,5 @@
     "transform-react-jsx"
   ],
   "presets": ["es2015", "es2016", "react"],
-  "ignore": ["lib/*"]
+  "ignore": ["lib"]
 }
