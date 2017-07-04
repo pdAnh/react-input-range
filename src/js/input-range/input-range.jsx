@@ -36,6 +36,8 @@ export default class InputRange extends React.Component {
       onChangeComplete: PropTypes.func,
       step: PropTypes.number,
       value: valuePropType,
+      sliderIcon: PropTypes.node,
+      sliderStyle: PropTypes.object,
     };
   }
 
@@ -531,6 +533,8 @@ export default class InputRange extends React.Component {
 
       const slider = (
         <Slider
+          sliderStyle={this.props.sliderStyle}
+          sliderIcon={this.props.sliderIcon}
           ariaLabelledby={this.props.ariaLabelledby}
           ariaControls={this.props.ariaControls}
           classNames={this.props.classNames}
@@ -603,7 +607,6 @@ export default class InputRange extends React.Component {
           ref={(trackNode) => { this.trackNode = trackNode; }}
           percentages={percentages}
           onTrackMouseDown={this.handleTrackMouseDown}>
-
           {this.renderSliders()}
         </Track>
 

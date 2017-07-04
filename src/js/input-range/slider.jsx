@@ -36,6 +36,8 @@ export default class Slider extends React.Component {
       percentage: PropTypes.number.isRequired,
       type: PropTypes.string.isRequired,
       value: PropTypes.number.isRequired,
+      sliderIcon: PropTypes.node,
+      sliderStyle: PropTypes.object,
     };
   }
 
@@ -262,7 +264,10 @@ export default class Slider extends React.Component {
           onMouseDown={this.handleMouseDown}
           onTouchStart={this.handleTouchStart}
           role="slider"
-          tabIndex="0" />
+          tabIndex="0"
+          sliderStyle={this.props.sliderStyle || {}}>
+          {this.props.sliderIcon && this.props.sliderIcon}
+        </div>
       </span>
     );
   }
