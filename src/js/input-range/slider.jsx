@@ -265,7 +265,7 @@ export default class Slider extends React.Component {
           onTouchStart={this.handleTouchStart}
           role="slider"
           tabIndex="0"
-          sliderStyle={this.props.sliderStyle || {}}>
+          style={this.props.sliderStyle || {}}>
           {this.props.sliderIcon && this.props.sliderIcon}
         </div>
       </span>
